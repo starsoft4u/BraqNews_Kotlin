@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navLastNews"
+        android:icon="@drawable/ic_news"
+        android:title="@string/last_news" />
+
+    <item
+        android:id="@+id/navNewspaper"
+        android:icon="@drawable/ic_newspaper"
+        android:title="@string/news_paper" />
+
+    <item
+        android:id="@+id/navMagazine"
+        android:icon="@drawable/ic_magazine"
+        android:title="@string/magazine" />
+
+    <item
+        android:id="@+id/navMyNews"
+        android:icon="@drawable/ic_my_news"
+        android:title="@string/my_news" />
+
+    <item
+        android:id="@+id/navSetting"
+        android:icon="@drawable/ic_setting"
+        android:title="@string/setting" />
+
+</menu>

@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="setting_menu_height">56dp</dimen>
+    <dimen name="button_height">48dp</dimen>
+    <dimen name="edit_text_height">40dp</dimen>
+    <dimen name="button_small_height">36dp</dimen>
+    <dimen name="design_bottom_navigation_text_size" tools:override="true">10sp</dimen>
+    <dimen name="design_bottom_navigation_active_text_size" tools:override="true">10sp</dimen>
+</resources>

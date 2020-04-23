@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/loginPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:src="@drawable/ic_user" />
+
+                <Button
+                    android:id="@+id/signUpButton"
+                    style="@style/ButtonStyle.Small"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_weight="1"
+                    android:text="@string/register" />
+
+                <Button
+                    android:id="@+id/loginButton"
+                    style="@style/ButtonStyle.Small.Secondary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/login" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="24dp"
+                android:text="@string/login_description"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/userPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/userImage"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/ic_user"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="username"
+                android:textSize="19sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/userImage"
+                app:layout_constraintTop_toTopOf="@+id/userImage" />
+
+            <TextView
+                android:id="@+id/userEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="user1@email.com"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/userName"
+                app:layout_constraintStart_toStartOf="@+id/userName"
+                app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            style="@style/TextStyle.Group"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setting_menu_height"
+            android:text="@string/setting" />
+
+        <www.barq.news.custom.SettingMenuView
+            android:id="@+id/settingModifySource"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_gear"
+            app:text="@string/modify_sources" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setting_menu_height"
+            android:background="@drawable/border_bottom_margin"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_notify" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/breaking_news_notifications" />
+
+            <Switch
+                android:id="@+id/settingNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <www.barq.news.custom.SettingMenuView
+            android:id="@+id/settingNotificationSound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_sound"
+            app:text="@string/sound_notifications" />
+
+        <TextView
+            style="@style/TextStyle.Group"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setting_menu_height"
+            android:text="@string/barq_app" />
+
+        <www.barq.news.custom.SettingMenuView
+            android:id="@+id/settingContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_call"
+            app:text="@string/contact_us" />
+
+        <www.barq.news.custom.SettingMenuView
+            android:id="@+id/settingFacebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_facebook"
+            app:text="@string/s_facebook" />
+
+        <www.barq.news.custom.SettingMenuView
+            android:id="@+id/settingTwitter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_twitter"
+            app:text="@string/s_twitter" />
+
+        <www.barq.news.custom.SettingMenuView
+            android:id="@+id/settingInstagram"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_instagram"
+            app:text="@string/s_instagram" />
+
+        <www.barq.news.custom.SettingMenuView
+            android:id="@+id/settingLinkedIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_linkedin"
+            app:text="@string/s_linkedin" />
+
+        <www.barq.news.custom.SettingMenuView
+            android:id="@+id/settingRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_rate"
+            app:text="@string/rate_barq" />
+
+        <www.barq.news.custom.SettingMenuView
+            android:id="@+id/settingShare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_share_round"
+            app:text="@string/share_barq" />
+
+        <www.barq.news.custom.SettingMenuView
+            android:id="@+id/settingSuggest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_source"
+            app:text="@string/suggest_source" />
+
+        <www.barq.news.custom.SettingMenuView
+            android:id="@+id/settingReportBug"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            app:icon="@drawable/ic_error"
+            app:text="@string/report_bug" />
+
+        <TextView
+            android:id="@+id/logoutPanel"
+            style="@style/TextStyle.Group"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setting_menu_height"
+            android:text="@string/logout" />
+
+        <www.barq.news.custom.SettingMenuView
+            android:id="@+id/settingLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            app:icon="@drawable/ic_logout"
+            app:text="@string/logout" />
+
+    </LinearLayout>
+
+</ScrollView>
